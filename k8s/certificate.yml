@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: k8s-multi-com-lts
+spec:
+  secretName: josephcheung.me
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: k8s-multi.com
+  dnsNames:
+    - josephcheung.me
+    - www.josephcheung.me
+  acme:
+    config:
+      - http01:
+        ingressClass: nginx
+      domains:
+        - josephcheung.me
+        - www.josephcheung.me
