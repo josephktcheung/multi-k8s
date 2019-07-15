@@ -7,14 +7,14 @@ spec:
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: k8s-multi.com
+  commonName: josephcheung.me
   dnsNames:
     - josephcheung.me
     - www.josephcheung.me
   acme:
     config:
       - http01:
-        ingressClass: nginx
+          ingressClass: nginx
       domains:
         - josephcheung.me
         - www.josephcheung.me
