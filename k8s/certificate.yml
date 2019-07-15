@@ -3,7 +3,7 @@ kind: Certificate
 metadata:
   name: josephcheung-me-lts
 spec:
-  secretName: josephcheung.me
+  secretName: josephcheung-me
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
